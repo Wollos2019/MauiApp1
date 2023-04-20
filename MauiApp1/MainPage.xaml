@@ -27,12 +27,28 @@
                 SemanticProperties.Description="Welcome to dot net Multi platform App U I"
                 FontSize="18"
                 HorizontalOptions="Center" />
+            
+            <Grid ColumnDefinitions="Auto, 30, Auto" HorizontalOptions="Center">
+                <Button Grid.Column="0"
+                    x:Name="CounterBtn"
+                    Text="Click me"
+                    WidthRequest="100"
+                    SemanticProperties.Hint="Counts the number of times you click"
+                    Clicked="OnCounterClicked"/>
+
+                <Button Grid.Column="2"
+                    x:Name="MoveBtn"
+                    Text="Page 2"
+                    WidthRequest="100"
+                    SemanticProperties.Hint="Move to another exercise page"
+                    Clicked="MoveBtn_Clicked"/>
+            </Grid>
 
             <Button
-                x:Name="CounterBtn"
-                Text="Click me"
-                SemanticProperties.Hint="Counts the number of times you click"
-                Clicked="OnCounterClicked"
+                x:Name="WollosButton"
+                Text="Click it"
+                SemanticProperties.Hint="Initiate Wollos actions"
+                Clicked="OnWollosClick"
                 HorizontalOptions="Center" />
 
         </VerticalStackLayout>

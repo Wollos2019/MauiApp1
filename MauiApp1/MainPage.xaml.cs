@@ -20,5 +20,15 @@ public partial class MainPage : ContentPage
 
 		SemanticScreenReader.Announce(CounterBtn.Text);
 	}
+
+	private void OnWollosClick(object sender, EventArgs e)
+	{
+		DisplayAlert("Bonjour", "Wollos", "Ok");
+	}
+
+    private async void MoveBtn_Clicked(object sender, EventArgs e)
+    {
+		await Shell.Current.GoToAsync("NewPage2");
+    }
 }
 
